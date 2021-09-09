@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                     //sh 'docker build -t mohsinm/backend .'
-                    sh 'docker build -t frontend:first .'
-                    sh 'docker tag mohsinm/frontend:first mohsinm/frontend:third'
+                    sh 'docker build -t frontend .'
+                    sh 'docker tag frontend mohsinm/frontend:third'
             }
         }
         // stage('Test') {
