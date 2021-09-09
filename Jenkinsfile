@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                     //sh 'docker build -t mohsinm/backend .'
-                    sh 'docker build -t mohsinm/frontend .'
+                    sh 'docker build -t mohsinm/frontend:first .'
             }
         }
         // stage('Test') {
@@ -23,7 +23,7 @@ pipeline {
                 script {
                     docker.withRegistry( '', registryCredential ) {
                         //sh 'docker push mohsinm/backend:latest'
-                        sh 'docker push mohsinm/frontend:latest'
+                        sh 'docker push mohsinm/frontend:second'
                     }
                 }
             }
